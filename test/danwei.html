@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>单位</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	h1{
+		font-size: 2rem;
+	}
+	.div1 {
+		width: 50rem;
+		height:50rem;
+		background-color: yellow;
+	}
+	</style>
+</head>
+<body>
+<h1>2个单位的大小</h1>
+<div class = "div1">
+	靠左40个距离
+</div>
+<script type="text/javascript">
+window.onload = function(){
+	var pageWidth;
+	var pageHeight;
+	//获取视口的大小
+	function getWindowSize(){
+		pageWidth = window.innerWidth;
+		pageHeight = window.innerHeight;
+		if(typeof pageWidth!="number"){
+		//兼容 (标准模式)
+			if(document.compatMode == "CSS1Compat"){
+				pageWidth = document.documentElement.clientWidth;
+				pageHeight = document.documentElement.clientHeight;
+		//混杂模式；
+			}else{
+				pageWidth = document.body.clientWidth;
+				pageHeight = document.body.clientHeight;
+			}
+		}
+	}
+	getWindowSize();
+	document.documentElement.style.fontSize = pageWidth/100+"px";
+	//当窗口大小发生变化的时
+	window.onresize = function(){
+		getWindowSize();
+		document.documentElement.style.fontSize = pageWidth/100+"px";
+	}
+}
+</script>
+</body>
+</html>
