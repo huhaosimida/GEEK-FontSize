@@ -46,3 +46,32 @@ window.onload = function () {
 	// 	win.addEventListener(resizeEvt, recalc, false)
 	// 	doc.addEventListener('DOMContentLoaded', recalc, false)
 	// })(document, window)
+
+
+	//胡浩    事件监听的兼容性写法
+    // var addEvent=function(elements,type,callback){
+ 	//   if(elements.addEventListener){
+ 	//        elements.addEventListener(elements,type,false)
+ 	//    }else if(elements.attachEvent){
+ 	//        elements.attachEvent("on"+type,callback)
+ 	//    };
+ 	// };
+
+
+	// win.addEventListener("resizeEvt", function() {
+	// 	clearTimeout(tid); //防止执行两次
+	// 	tid = setTimeout(recalc, 200);
+	// }, false);
+
+	// 防止有些未知bug。load之后再调用一次。
+	// window.addEventListener( 'load' , recalc , false ); 
+	
+
+	// 	防止某些机型怪异现象，异步再调用一次
+	// setTimeout(function(){
+	// 	recalc(); 
+	// },200)
+
+
+
+
