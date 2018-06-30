@@ -71,6 +71,23 @@ window.onload = function () {
 	// setTimeout(function(){
 	// 	recalc(); 
 	// },200)
+	
+
+
+	//赵骏华
+	//该如何考虑到达一定宽度时，是否改变进行访问页面方式，是pc端还是手机端？
+	//在pc端中谷歌浏览器的最小字体是12px,而其他浏览器却不是，该如何解决？
+	// window.onresize = function () {
+	// 		getWindowSize();
+	// 		//当页面宽度到达一定值是，是否考虑已经不是手机端，而是pc端，是否计算方法也就不同？
+	// 				if(pageWidth > 640) {
+	// 						pageWidth = 640;
+	// 						document.documentElement.style.fontSize = pageWidth / 6.4 + "px";
+	// 						}		
+	// 				else{		
+	// 					document.documentElement.style.fontSize = pageWidth / 100 + "px";
+	// 				}
+	// 	}
 
 
 
